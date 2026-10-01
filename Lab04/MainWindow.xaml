@@ -1,0 +1,29 @@
+<Window x:Class="Lab04.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Lab04 - Neptuno" Height="550" Width="950"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+    <TabControl Margin="10">
+        <TabItem Header="Productos">
+            <DataGrid x:Name="dgProductos" IsReadOnly="True" Margin="5"/>
+        </TabItem>
+
+        <TabItem Header="Categorías">
+            <DataGrid x:Name="dgCategorias" IsReadOnly="True" Margin="5"/>
+        </TabItem>
+
+        <TabItem Header="Proveedores">
+            <DockPanel Margin="5">
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,5">
+                    <Label Content="Nombre contacto:"/>
+                    <TextBox x:Name="txtNombreContacto" Width="180" VerticalContentAlignment="Center"/>
+                    <Label Content="Ciudad:" Margin="10,0,0,0"/>
+                    <TextBox x:Name="txtCiudad" Width="150" VerticalContentAlignment="Center"/>
+                    <Button Content="Buscar" Width="90" Margin="10,0,0,0" Click="btnBuscar_Click"/>
+                </StackPanel>
+                <DataGrid x:Name="dgProveedores" IsReadOnly="True"/>
+            </DockPanel>
+        </TabItem>
+    </TabControl>
+</Window>
